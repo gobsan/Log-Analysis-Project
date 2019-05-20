@@ -102,9 +102,9 @@ def run():
     """Running report ..."""
     print("Running reporting tools...\n")
     answer1(strQueryAnswer1)
-    print("\n")
+
     answer2(strQueryAnswer2)
-    print("\n")
+
     answer3(strQueryAnswer3)
     print("\n")
 
