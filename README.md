@@ -7,9 +7,11 @@ Internal reporting tool that will use information from the database to discover 
 1. **What are the most popular three articles of all time?** Which articles have been accessed the most? Present this information as a sorted list with the most popular article at the top.
 1. **Who are the most popular article authors of all time?** That is, when you sum up all of the articles each author has written, which authors get the most page views? Present this as a sorted list with the most popular author at the top.
 1. **On which days did more than 1% of requests lead to errors?** The log table includes a column status that indicates the HTTP status code that the news site sent to the user's browser.
+
 ## Used Tools
 1. Python 3.7.3
 1. PostgresSQL
+
 ## Download The Data
 1. Download the database file from https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip.
 1. Unzip the data to get the newsdata.sql file.
@@ -24,4 +26,13 @@ The databse contains the following three tables:
 1. **log** - contains all recieved requests to the site.
 
 ## Code Design
+This project uses psycopg2 DB API to connect PostgresSQL
 1. `import psycopg2` imports DB API to connet to PostgresSQL
+1. `connect()` function that handles database connection
+1. `answer1(argument)`  this function is used to fetch answer 1 data from PostgresSQL query issued as *argument*
+1. `answer2(argument)`  this function is used to fetch answer 2 data from PostgresSQL query issued as *argument*
+1. `answer3(argument)`  this function is used to fetch answer 3 data from PostgresSQL query issued as *argument*
+
+## Runing The Project
+1. First navigate to the project directory using in my case `cd /vagrant/newslog.py`
+1. Run `python newslog.py`
